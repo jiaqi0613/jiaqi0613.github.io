@@ -177,6 +177,25 @@ img {
   background-clip: text;
 }
 
+.typewriter {
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-sm);
+  min-height: 2.5rem;
+}
+
+.typewriter__cursor {
+  animation: blink 0.7s step-end infinite;
+  color: var(--color-text-secondary);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 .hero-subtitle {
   font-size: 1.15rem;
   line-height: 1.7;
@@ -587,6 +606,49 @@ img {
 .insight-card p {
   font-size: 0.85rem;
   margin-bottom: 0 !important;
+}
+
+.project-image {
+  margin: var(--space-md) 0;
+}
+
+.project-image img {
+  border-radius: var(--radius);
+  width: 100%;
+}
+
+.project-image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+  margin: var(--space-md) 0;
+}
+
+.project-image-grid .project-image {
+  margin: 0;
+}
+
+.project-image-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin: var(--space-md) 0;
+}
+
+.project-image-row .project-image {
+  margin: 0;
+}
+
+.project-image-row .project-image img {
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .project-image-grid,
+  .project-image-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 .project-nav {
