@@ -166,7 +166,7 @@ img {
   line-height: 1.25;
   letter-spacing: -0.02em;
   max-width: 800px;
-  margin-bottom: var(--space-md);
+  margin-bottom: 0.5rem;
 }
 
 .hero-title em {
