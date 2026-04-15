@@ -75,4 +75,11 @@ document.addEventListener('DOMContentLoaded', () => {
     el.classList.add('fade-in');
     observer.observe(el);
   });
+
+  // Failsafe: if any fade-in elements haven't become visible after 1.5s, show them
+  setTimeout(() => {
+    document.querySelectorAll('.fade-in:not(.visible)').forEach((el) => {
+      el.classList.add('visible');
+    });
+  }, 1500);
 });
